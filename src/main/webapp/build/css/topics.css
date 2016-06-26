@@ -1,0 +1,32 @@
+.topics-wrapper .left {
+    width: 70%;
+    box-sizing: border-box;
+    float: left;
+}
+.topics-wrapper .right {
+    float: left;
+    box-sizing: border-box;
+    width: 30%;
+    min-width: 280px;
+    padding-left: 10px;
+}
+.link {
+    text-decoration: none;
+}
+.tag-item {
+    display: inline-block;
+    padding: 5px 10px;
+    color: #80bd01;
+}
+.tag-group .tag-item.active {
+    background-color: #80bd01;
+    color: #FFF;
+    border-radius: 2px;
+}
+
+.topics-wrapper .right .panel {
+    margin-bottom: 10px;
+}
+.panel.user-info {
+    padding: 10px;
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lk.blog.mapper.TopicMapper">
+
+    <resultMap id="associatedTopic" type="topic">
+        <id property="id" column="id" />
+        <result property="title" column="title" />
+        <result property="content" column="content" />
+        <result property="createDate" column="createDate" />
+        <result property="updateDate" column="updateDate" />
+        <association property="author" javaType="user">
+            <id property="id" column="id" />
+            <result column="username" property="username" />
+            <result column="email" property="email" />
+            <result column="password" property="password" />
+        </association>
+    </resultMap>
+
+    <select id="getTopicById" resultMap="associatedTopic">
+        SELECT * FROM topic WHERE id=#{topicId}
+    </select>
+
+    <insert id="addTopic" parameterType="topic">
+      INSERT INTO topic(id, title, content, create_date, tag_id) VALUES(uuid(), #{title}, #{content}, now(), #{tag.id})
+    </insert>
+    
+    <select id="getTopicPagination" resultMap="associatedTopic">
+        SELECT * FROM topic
+    </select>
+
+    <update id="updateTopic" parameterType="topic">
+        UPDATE topic set update_date = now() WHERE id = #{id}
+    </update>
+
+    <delete id="deleteTopic">
+        DELETE FROM topic WHERE id = #{topicId}
+    </delete>
+</mapper>
