@@ -1,9 +1,10 @@
 package com.lk.blog.exception;
 
-/**
- * Created by Administrator on 2016/6/26.
- */
-public class DataErrorException extends Exception {
+public class DataErrorException extends RuntimeException {
+    public DataErrorException() {
+        super();
+    }
+
     public DataErrorException(Throwable cause) {
         super(cause);
     }

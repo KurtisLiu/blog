@@ -1,10 +1,11 @@
 package com.lk.blog.service;
 
-import com.lk.blog.exception.ParameterException;
 import com.lk.blog.model.User;
 
 public interface UserService {
-    public User getUserById(String id) throws ParameterException;
+    public User getUserById(String id);
 
-    public void saveUser(User user);
+    public User saveUser(User user);
+
+    public User getUserByEmail(String email);
 }

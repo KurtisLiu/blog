@@ -16,4 +16,8 @@
         DELETE FROM user WHERE id = #{id}
     </delete>
 
+    <select id="getUserByEmail" resultType="user">
+        SELECT * FROM user WHERE email = #{email}
+    </select>
+
 </mapper>

@@ -33,7 +33,7 @@
         </div>
 
         <div class="right">
-            <#if loginUser??>
+            <#if Session.loginUser??>
                 <div class="panel user-info">
                     <h2 class="panel-title">Liu Kai's Blog</h2>
                     <div class="content">

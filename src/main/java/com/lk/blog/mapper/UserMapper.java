@@ -12,4 +12,6 @@ public interface UserMapper {
     public User getUserById(String id);
 
     public void deleteUserById(String id);
+
+    public User getUserByEmail(String email);
 }
