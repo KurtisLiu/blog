@@ -12,14 +12,17 @@
         <div class="panel">
             <div class="panel-header"><a href="/" class="link">主页</a> / 登录</div>
             <div class="panel-body">
+                <#if Request.errorMessage??>
+                    <div class="error">${errorMessage}</div>
+                </#if>
                 <form action="/user/login" method="POST">
                     <div class="form-group">
-                        <label class="form-label" for="name">用户名</label>
-                        <input class="form-input" type="text" name="name" />
+                        <label class="form-label" for="email">邮箱</label>
+                        <input class="form-input" type="text" name="email" autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">密码</label>
-                        <input class="form-input" type="password" name="password" />
+                        <input class="form-input" type="password" name="password" autocomplete="off" />
                     </div>
                     <div class="action-group">
                         <input type="submit" class="submit login" value="登录" />

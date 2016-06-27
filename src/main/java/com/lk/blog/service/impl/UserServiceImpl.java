@@ -10,8 +10,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Base64;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -41,7 +40,7 @@ public class UserServiceImpl implements UserService {
         }
         User user = null;
         try {
-            user = userMapper.getUserByEmail(user.getEmail());
+            user = userMapper.getUserByEmail(email);
         } catch (Exception e) {
             throw new DataErrorException(e);
         }
@@ -55,6 +54,7 @@ public class UserServiceImpl implements UserService {
         }
         User resultUser = null;
         try {
+            user.setPassword(Base64.getEncoder().encodeToString(user.getPassword().getBytes()));
             userMapper.addUser(user);
             resultUser = userMapper.getUserByEmail(user.getEmail());
         } catch (Exception e) {

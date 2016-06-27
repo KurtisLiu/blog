@@ -15,15 +15,15 @@
                 <form action="/user/register" method="POST">
                     <div class="form-group">
                         <label class="form-label" for="username">用户名</label>
-                        <input class="form-input" type="text" name="username" />
+                        <input class="form-input" type="text" name="username" autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="password">密码</label>
-                        <input class="form-input" type="password" name="password" />
+                        <input class="form-input" type="password" name="password" autocomplete="off" />
                     </div>
                     <div class="form-group">
                         <label class="form-label" for="email">邮箱</label>
-                        <input class="form-input" type="email" name="email" />
+                        <input class="form-input" type="email" name="email" autocomplete="off" />
                     </div>
                     <div class="action-group">
                         <input type="submit" class="submit login" value="注册" />

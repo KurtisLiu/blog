@@ -75,3 +75,7 @@ header::after {
 ul, li {
     list-style: none;
 }
+
+.error {
+    color: #F00;
+}

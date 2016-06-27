@@ -16,17 +16,21 @@
                 <div class="panel-header">
                     <div class="tag-group">
                         <a href="/topic}" class="tag-item link ${RequestParameters.tagId???string("", "active")}">全部</a>
-                        <#list Application.tags as tag>
+                        <#list tags as tag>
                             <a href="/topic?tagId=${tag.id}" class="tag-item link ${(RequestParameters.tagId!"" == tag.id)?string("active", "")}">${tag.name}</a>
                         </#list>
                     </div>
                 </div>
                 <div class="panel-body">
-                    <ul class="topic-list">
-                    <#list topics as topic>
-                        ${topic.title}
-                    </#list>
-                    </ul>
+                    <#if (topics?? && topics?size > 0)>
+                        <ul class="topic-list">
+                            <#list topics as topic>
+                                ${topic.title}
+                            </#list>
+                        </ul>
+                    <#else>
+                        暂无数据
+                    </#if>
                 </div>
             </div>
 
