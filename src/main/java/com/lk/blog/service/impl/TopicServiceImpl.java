@@ -1,6 +1,6 @@
 package com.lk.blog.service.impl;
 
-import com.lk.blog.exception.DataErrorException;
+import com.lk.blog.exception.DataAccessException;
 import com.lk.blog.exception.ParameterException;
 import com.lk.blog.mapper.TopicMapper;
 import com.lk.blog.model.Topic;
@@ -29,7 +29,7 @@ public class TopicServiceImpl implements TopicService {
         try {
             topicMapper.addTopic(topic);
         } catch (Exception e) {
-            throw new DataErrorException(e);
+            throw new DataAccessException(e);
         }
     }
 }

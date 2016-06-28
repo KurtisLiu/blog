@@ -58,4 +58,14 @@
         <aop:pointcut id="service" expression="execution(* com.lk.blog.service..*ServiceImpl.*(..)))" />
     </aop:config>
 
+    <bean id="exceptionResolver" class="com.lk.blog.resolver.ExceptionResolver">
+        <property name="defaultErrorView" value="exception/error" />
+        <property name="exceptionMappings">
+            <props>
+                <prop key="com.lk.blog.exception.DataAccessException">exception/dataAccessError</prop>
+                <prop key="com.lk.blog.exception.BusinessException">exception/businessException</prop>
+            </props>
+        </property>
+    </bean>
+
 </beans>

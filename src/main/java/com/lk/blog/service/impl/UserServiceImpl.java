@@ -1,7 +1,7 @@
 package com.lk.blog.service.impl;
 
 import com.lk.blog.exception.BusinessException;
-import com.lk.blog.exception.DataErrorException;
+import com.lk.blog.exception.DataAccessException;
 import com.lk.blog.exception.ParameterException;
 import com.lk.blog.mapper.UserMapper;
 import com.lk.blog.model.User;
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         try {
             user = userMapper.getUserById(userId);
         } catch (Exception e) {
-            throw new DataErrorException(e);
+            throw new DataAccessException(e);
         }
         return user;
     }
@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         try {
             user = userMapper.getUserByEmail(email);
         } catch (Exception e) {
-            throw new DataErrorException(e);
+            throw new DataAccessException(e);
         }
         return user;
     }
@@ -58,7 +58,7 @@ public class UserServiceImpl implements UserService {
             userMapper.addUser(user);
             resultUser = userMapper.getUserByEmail(user.getEmail());
         } catch (Exception e) {
-            throw new DataErrorException(e);
+            throw new DataAccessException(e);
         }
         if (resultUser == null) {
             throw new BusinessException();
