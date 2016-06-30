@@ -1,29 +1,29 @@
 package com.lk.blog.interceptor;
 
-import org.springframework.web.servlet.HandlerInterceptor;
-import org.springframework.web.servlet.ModelAndView;
+import com.lk.blog.annotation.Login;
+import com.lk.blog.constans.ApplicationConstants;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.net.URLEncoder;
 
-/**
- * Created by Administrator on 2016/6/2.
- */
-public class PrivilegeInterceptor implements HandlerInterceptor {
+public class PrivilegeInterceptor extends HandlerInterceptorAdapter {
     @Override
-    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-        System.out.println("preHandle");
+    public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object handler) throws Exception {
+        if (handler.getClass().isAssignableFrom(HandlerMethod.class)) {
+            Login annotation = ((HandlerMethod)handler).getMethodAnnotation(Login.class);
+            if (annotation != null) {
+                HttpSession session = httpServletRequest.getSession();
+                if (session.getAttribute(ApplicationConstants.LOGIN_USER) == null) {
+                    String returnUrl = URLEncoder.encode(httpServletRequest.getRequestURL().toString(), "UTF-8");
+                    httpServletResponse.sendRedirect("/user/login?returnUrl=" + returnUrl);
+                    return false;
+                }
+            }
+        }
         return true;
-    }
-
-    @Override
-    public void postHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, ModelAndView modelAndView) throws Exception {
-        System.out.println("postHandle");
-
-    }
-
-    @Override
-    public void afterCompletion(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o, Exception e) throws Exception {
-        System.out.println("afterCompletion");
     }
 }

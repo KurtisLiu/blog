@@ -55,7 +55,8 @@ public class UserController {
         }
         userInDB.setPassword(null);
         session.setAttribute(ApplicationConstants.LOGIN_USER, userInDB);
-        return "redirect:/topic";
+        String returnUrl = request.getParameter("returnUrl");
+        return "redirect:" + (returnUrl == null ? "/topic" : returnUrl);
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)

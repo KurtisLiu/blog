@@ -1,5 +1,6 @@
 package com.lk.blog.controller.ui;
 
+import com.lk.blog.annotation.Login;
 import com.lk.blog.model.Topic;
 import com.lk.blog.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,12 +25,14 @@ public class TopicController {
         return modelAndView;
     }
 
+    @Login
     @RequestMapping(value = "", method = RequestMethod.POST)
     public String saveTopic(Topic topic) {
         topicService.addTopic(topic);
         return "redirect:/topic";
     }
 
+    @Login
     @RequestMapping(value = "/toCreate", method = RequestMethod.GET)
     public ModelAndView toCraete() {
         ModelAndView modelAndView = new ModelAndView("topicCreate");

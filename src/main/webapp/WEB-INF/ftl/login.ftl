@@ -15,7 +15,7 @@
                 <#if Request.errorMessage??>
                     <div class="error">${errorMessage}</div>
                 </#if>
-                <form action="/user/login" method="POST">
+                <form action="/user/login${RequestParameters["returnUrl"]???string("?returnUrl=" + RequestParameters["returnUrl"]!"", "")}" method="POST">
                     <div class="form-group">
                         <label class="form-label" for="email">邮箱</label>
                         <input class="form-input" type="text" name="email" autocomplete="off" />
