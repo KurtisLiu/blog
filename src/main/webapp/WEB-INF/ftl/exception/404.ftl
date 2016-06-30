@@ -9,6 +9,7 @@
     <#include "../components/header.ftl">
     <div class="body-wrapper">
         404， 页面飞到月球上去了
+        <a href="/">返回首页</a>
     </div>
 </body>
 </html>
