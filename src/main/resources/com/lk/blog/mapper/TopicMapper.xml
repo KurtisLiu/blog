@@ -11,7 +11,7 @@
         <result property="createDate" column="createDate" />
         <result property="updateDate" column="updateDate" />
         <association property="author" javaType="user">
-            <id property="id" column="id" />
+            <id property="id" column="author_id" />
             <result column="username" property="username" />
             <result column="email" property="email" />
             <result column="password" property="password" />
@@ -26,7 +26,7 @@
       INSERT INTO topic(id, title, content, create_date, tag_id) VALUES(uuid(), #{title}, #{content}, now(), #{tag.id})
     </insert>
     
-    <select id="getTopicPagination" resultMap="associatedTopic">
+    <select id="getTopicsByPage" resultMap="associatedTopic">
         SELECT * FROM topic
     </select>
 

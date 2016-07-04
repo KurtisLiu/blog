@@ -1,9 +1,10 @@
 package com.lk.blog.mapper;
 
-import java.util.List;
-
 import com.lk.blog.model.Topic;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Map;
 
 @Repository
 public interface TopicMapper {
@@ -12,7 +13,7 @@ public interface TopicMapper {
 
     public void addTopic(Topic topic);
     
-    public List<Topic> getTopicPagination(int offset, int limit);
+    public List<Topic> getTopicsByPage(Map<String, Object> params);
 
     public void updateTopic(Topic topic);
 

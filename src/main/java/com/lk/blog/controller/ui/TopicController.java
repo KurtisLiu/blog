@@ -1,6 +1,7 @@
 package com.lk.blog.controller.ui;
 
 import com.lk.blog.annotation.Login;
+import com.lk.blog.dto.Page;
 import com.lk.blog.model.Topic;
 import com.lk.blog.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,9 @@ public class TopicController {
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public ModelAndView pagination() {
-        List<Topic> topics = topicService.getPaginatedTopics(0, 20);
+        Page page = new Page();
+        page.setPageNow(0);
+        List<Topic> topics = topicService.getTopicsByPage(page);
         ModelAndView modelAndView = new ModelAndView("topics");
         modelAndView.addObject("topics", topics);
         return modelAndView;

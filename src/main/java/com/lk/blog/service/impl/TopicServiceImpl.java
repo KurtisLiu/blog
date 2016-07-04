@@ -1,5 +1,6 @@
 package com.lk.blog.service.impl;
 
+import com.lk.blog.dto.Page;
 import com.lk.blog.exception.DataAccessException;
 import com.lk.blog.exception.ParameterException;
 import com.lk.blog.mapper.TopicMapper;
@@ -8,7 +9,9 @@ import com.lk.blog.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class TopicServiceImpl implements TopicService {
@@ -16,8 +19,10 @@ public class TopicServiceImpl implements TopicService {
     private TopicMapper topicMapper;
 
     @Override
-    public List<Topic> getPaginatedTopics(int offset, int size) {
-        List<Topic> topics = topicMapper.getTopicPagination(offset, size);
+    public List<Topic> getTopicsByPage(Page page) {
+        Map<String, Object> params = new HashMap<>();
+        params.put("page", page);
+        List<Topic> topics = topicMapper.getTopicsByPage(params);
         return topics;
     }
 
