@@ -1,10 +1,9 @@
 package com.lk.blog.resolver;
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.lk.blog.dto.AjaxResult;
 import com.lk.blog.exception.BusinessException;
 import com.lk.blog.exception.ParameterException;
-import com.lk.blog.vo.AjaxResult;
 import org.apache.log4j.Logger;
 import org.springframework.dao.DataAccessException;
 import org.springframework.web.servlet.ModelAndView;

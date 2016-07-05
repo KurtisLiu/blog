@@ -25,6 +25,14 @@
         </property>
     </bean>
 
+    <!-- freemarker 静态类的配置位置 -->
+    <bean id="freemarkerStatic" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location" value="classpath:staticClass.properties" />
+    </bean>
+    <!-- freemarker 静态类的解析配置-->
+    <bean id="freemarkerStaticModels" class="com.lk.blog.utils.FreemarkerStaticModels" factory-method="getInstance">
+        <property name="staticModels" ref="freemarkerStatic"/>
+    </bean>
     <!--视图解析 -->
     <bean id="view" class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.freemarker.FreeMarkerView" />
@@ -33,6 +41,7 @@
         <property name="suffix" value=".ftl" />
         <property name="exposeSpringMacroHelpers" value="true"/>
         <property name="requestContextAttribute" value="rc"/>
+        <property name="attributesMap" ref="freemarkerStaticModels" />
     </bean>
 
     <!-- 拦截器 -->

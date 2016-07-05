@@ -1,4 +1,4 @@
-package com.lk.blog.vo;
+package com.lk.blog.dto;
 
 import java.io.Serializable;
 

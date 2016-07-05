@@ -22,12 +22,24 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <#if (topics?? && topics?size > 0)>
+                    <#if (topics?? && topics.list?? && topics.list?size > 0)>
                         <ul class="topic-list">
-                            <#list topics as topic>
-                                ${topic.title}
+                            <#list topics.list as topic>
+                                <li>
+                                    <a href="/user/${topic.author.id}"><image src="${topic.author.avator!""}" class="author-avator" /></a>
+                                    <span class="reply-info">
+                                        <span class="reply-count">${topic.replyCount}</span>
+                                        <span>/</span>
+                                        <span class="visitCount">${topic.visitCount}</span>
+                                    </span>
+                                    <a href="/topic/${topic.id}" class="link">${topic.title}</a>
+                                    <span class="last-time">${DateUtils.getRangeToNow(topic.lastReplyDate)!""}</span>
+                                </li>
                             </#list>
                         </ul>
+                        <div class="pagination">
+                            当前第${topics.pageNow + 1}页，总共${topics.getTotalPage()}页
+                        </div>
                     <#else>
                         暂无数据
                     </#if>

@@ -4,18 +4,25 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lk.blog.mapper.TopicMapper">
 
+    <resultMap id="associatedUser" type="user" autoMapping="true">
+        <id property="id" column="id" />
+    </resultMap>
+
     <resultMap id="associatedTopic" type="topic">
         <id property="id" column="id" />
         <result property="title" column="title" />
         <result property="content" column="content" />
-        <result property="createDate" column="createDate" />
-        <result property="updateDate" column="updateDate" />
-        <association property="author" javaType="user">
-            <id property="id" column="author_id" />
-            <result column="username" property="username" />
-            <result column="email" property="email" />
-            <result column="password" property="password" />
+        <result property="createDate" column="create_date" />
+        <result property="updateDate" column="update_date" />
+        <result property="replyCount" column="reply_count" />
+        <result property="visitCount" column="visit_count" />
+        <result property="isGood" column="good" />
+        <result property="lastReplyDate" column="last_reply_date" />
+        <association property="tag" javaType="tag" columnPrefix="tag_">
+            <id property="id" column="tag_id" />
         </association>
+        <association property="author" resultMap="associatedUser" columnPrefix="author_" />
+        <association property="lastReplyUser" resultMap="associatedUser" columnPrefix="last_reply_user_" />
     </resultMap>
 
     <select id="getTopicById" resultMap="associatedTopic">
@@ -23,11 +30,13 @@
     </select>
 
     <insert id="addTopic" parameterType="topic">
-      INSERT INTO topic(id, title, content, create_date, tag_id) VALUES(uuid(), #{title}, #{content}, now(), #{tag.id})
+      INSERT INTO topic(id, title, content, create_date, update_date,, tag_id, author_id, last_reply_date) VALUES(uuid(), #{title}, #{content}, #{createDate}, #{updateDate}, #{tag.id}, #{author.id}, #{lastReplyDate})
     </insert>
     
     <select id="getTopicsByPage" resultMap="associatedTopic">
-        SELECT * FROM topic
+        SELECT t.*, u.username as author_username, u.avator as author_avator, u.email as author_email, tag.name as tag_name, replyUser.id as last_reply_user_id, replyUser.avator as last_reply_user_avator
+        FROM topic t LEFT JOIN user u ON t.author_id = u.id LEFT JOIN tag ON t.tag_id = tag.id LEFT JOIN user replyUser on t.last_reply_user = replyUser.id
+        WHERE t.deleted = 0 AND u.deleted = 0
     </select>
 
     <update id="updateTopic" parameterType="topic">
