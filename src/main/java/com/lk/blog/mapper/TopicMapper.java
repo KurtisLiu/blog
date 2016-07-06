@@ -1,5 +1,6 @@
 package com.lk.blog.mapper;
 
+import com.lk.blog.dto.Page;
 import com.lk.blog.model.Topic;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +14,7 @@ public interface TopicMapper {
 
     public void addTopic(Topic topic);
     
-    public List<Topic> getTopicsByPage(Map<String, Object> params);
+    public List<Topic> getTopicsByPage(Page page);
 
     public void updateTopic(Topic topic);
 

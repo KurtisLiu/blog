@@ -10,8 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.List;
 
@@ -22,12 +24,15 @@ public class TopicController {
     private TopicService topicService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public ModelAndView pagination() {
-        Page page = new Page();
-        page.setPageNow(0);
-        List<Topic> topics = topicService.getTopicsByPage(page);
+    public ModelAndView pagination(HttpServletRequest request) {
+        String query = request.getParameter("query");
+        String pageNowStr = request.getParameter("pageNow");
+        int pageNow = 0;
+        if (pageNowStr != null) {
+            pageNow = Integer.parseInt(pageNowStr);
+        }
+        Page page = topicService.getTopicsByPage(query, pageNow);
         ModelAndView modelAndView = new ModelAndView("topics");
-        page.setList(topics);
         modelAndView.addObject("topics", page);
         return modelAndView;
     }

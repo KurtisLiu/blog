@@ -10,9 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class TopicServiceImpl implements TopicService {
@@ -20,11 +18,13 @@ public class TopicServiceImpl implements TopicService {
     private TopicMapper topicMapper;
 
     @Override
-    public List<Topic> getTopicsByPage(Page page) {
-        Map<String, Object> params = new HashMap<>();
-        params.put("page", page);
-        List<Topic> topics = topicMapper.getTopicsByPage(params);
-        return topics;
+    public Page<Topic> getTopicsByPage(String query, int pageNow) {
+        Page<Topic> page = new Page<>();
+        page.setPageNow(pageNow);
+        page.setQuery(query);
+        List<Topic> topics = topicMapper.getTopicsByPage(page);
+        page.setList(topics);
+        return page;
     }
 
     @Override

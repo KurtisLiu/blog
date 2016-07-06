@@ -1,0 +1,38 @@
+.form-group {
+    margin-bottom: 10px;
+}
+.panel .form-label {
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+}
+.panel .form-input {
+    border: 1px solid rgb(204, 204, 204);
+    line-height: 28px;
+    border-radius: 2px;
+    background-color: #FFF;
+    width: 200px;
+    padding: 0 5px;
+    outline: none;
+}
+
+.action-group {
+    text-align: right;
+    max-width: 318px;
+}
+.action-group .update {
+    background-color: #08c;
+    border-width: 0;
+    padding: 10px 20px;
+    border-radius: 2px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.profile-wrapper .form-upload {
+    display: inline-block;
+}
+.profile-wrapper .avator {
+    width: 100px;
+    height: 100px;
+}

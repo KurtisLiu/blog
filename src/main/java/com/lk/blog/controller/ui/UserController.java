@@ -1,5 +1,6 @@
 package com.lk.blog.controller.ui;
 
+import com.lk.blog.annotation.Login;
 import com.lk.blog.constans.ApplicationConstants;
 import com.lk.blog.model.User;
 import com.lk.blog.service.UserService;
@@ -8,10 +9,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 import java.util.Base64;
 
 @Controller
@@ -63,6 +69,37 @@ public class UserController {
     public String logout(HttpSession session) {
         session.removeAttribute(ApplicationConstants.LOGIN_USER);
         return "redirect:/topic";
+    }
+
+    @Login
+    @RequestMapping(value = "/setting", method = RequestMethod.GET)
+    public ModelAndView toSetting(HttpSession session) {
+        User user = (User) session.getAttribute(ApplicationConstants.LOGIN_USER);
+        ModelAndView modelAndView = new ModelAndView("profile");
+        modelAndView.addObject("loginUser", user);
+        return modelAndView;
+    }
+
+    @Login
+    @RequestMapping(value = "")
+    public ModelAndView updateUser(@RequestParam("avatorFile") CommonsMultipartFile file, User user, HttpServletRequest request) throws IOException {
+        ModelAndView modelAndView = null;
+        String fileType = file.getContentType();
+        if (fileType.indexOf("image") == -1) {
+            modelAndView = new ModelAndView("profile");
+            modelAndView.addObject("error", "请上传一张图片");
+            return modelAndView;
+        }
+        String fileName = file.getOriginalFilename();
+        ServletContext context = request.getServletContext();
+        String path = context.getRealPath("/build/upload");
+        File targetFile = new File(path + "/" + fileName);
+        file.transferTo(targetFile);
+
+        user.setAvator("/build/upload/" + fileName);
+
+        modelAndView = new ModelAndView("redirect:/topic");
+        return modelAndView;
     }
 
 }
