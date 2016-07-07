@@ -25,14 +25,12 @@
                     <#if (topics?? && topics.list?? && topics.list?size > 0)>
                         <ul class="topic-list">
                             <#list topics.list as topic>
-                                <li>
+                                <li class="topic-item">
                                     <a href="/user/${topic.author.id}"><image src="${topic.author.avator!""}" class="author-avator" /></a>
                                     <span class="reply-info">
-                                        <span class="reply-count">${topic.replyCount}</span>
-                                        <span>/</span>
-                                        <span class="visitCount">${topic.visitCount}</span>
+                                        <span class="reply-count">${topic.replyCount}</span><span>/</span><span class="visitCount">${topic.visitCount}</span>
                                     </span>
-                                    <a href="/topic/${topic.id}" class="link">${topic.title}</a>
+                                    <a href="/topic/${topic.id}" class="link topic-title">${topic.title}</a>
                                     <span class="last-time">${DateUtils.getRangeToNow(topic.lastReplyDate)!""}</span>
                                 </li>
                             </#list>

@@ -7,5 +7,7 @@ public interface UserService {
 
     public User saveUser(User user);
 
+    public void updateUser(User user);
+
     public User getUserByEmail(String email);
 }

@@ -20,4 +20,10 @@
         SELECT * FROM user WHERE email = #{email}
     </select>
 
+    <update id="updateUser" parameterType="user">
+        UPDATE user
+        SET username = #{username}, email = #{email}, avator = #{avator}
+        WHERE id = #{id};
+    </update>
+
 </mapper>

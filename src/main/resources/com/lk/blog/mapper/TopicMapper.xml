@@ -30,7 +30,7 @@
     </select>
 
     <insert id="addTopic" parameterType="topic">
-      INSERT INTO topic(id, title, content, create_date, update_date,, tag_id, author_id, last_reply_date) VALUES(uuid(), #{title}, #{content}, #{createDate}, #{updateDate}, #{tag.id}, #{author.id}, #{lastReplyDate})
+      INSERT INTO topic(id, title, content, create_date, update_date, tag_id, author_id, last_reply_date) VALUES(uuid(), #{title}, #{content}, #{createDate}, #{updateDate}, #{tag.id}, #{author.id}, #{lastReplyDate})
     </insert>
     
     <select id="getTopicsByPage" resultMap="associatedTopic" parameterType="page">

@@ -12,6 +12,9 @@
         <div class="panel">
             <div class="panel-header"><a href="/" class="link">主页</a> / 设置</div>
             <div class="panel-body">
+                <#if error??>
+                    <div class="error">${error}</div>
+                </#if>
                 <form action="/user" method="POST" enctype="multipart/form-data">
                     <div class="form-group">
                         <label class="form-label" for="username">用户名</label>

@@ -23,6 +23,7 @@ public class ExceptionResolver extends SimpleMappingExceptionResolver {
             logger.error("ajax error", ex);
             return this.doAjaxResolverException(request, response, ex);
         }
+        logger.error(ex);
         return super.doResolveException(request, response, handler, ex);
     }
 

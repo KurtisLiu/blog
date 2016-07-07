@@ -96,7 +96,12 @@ public class UserController {
         File targetFile = new File(path + "/" + fileName);
         file.transferTo(targetFile);
 
-        user.setAvator("/build/upload/" + fileName);
+        HttpSession session = request.getSession();
+        User loginUser = (User) session.getAttribute(ApplicationConstants.LOGIN_USER);
+        loginUser.setAvator("/build/upload/" + fileName);
+        loginUser.setUsername(user.getUsername());
+        loginUser.setEmail(user.getEmail());
+        userService.updateUser(loginUser);
 
         modelAndView = new ModelAndView("redirect:/topic");
         return modelAndView;

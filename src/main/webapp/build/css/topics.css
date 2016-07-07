@@ -35,6 +35,47 @@
 .panel.user-info {
     padding: 10px;
 }
+.topic-item {
+    padding: 5px 0;
+    border-top: 1px solid #f0f0f0;
+}
+.topic-item:hover {
+    background: #f5f5f5;
+}
+.topic-item:first-child {
+    border-top-width: 0;
+}
+.topic-item .author-avator {
+    width: 30px;
+    height:30px;
+    vertical-align: middle;
+}
+.topic-item .reply-info {
+    margin: 0 10px;
+}
+.topic-item .topic-title {
+    color: #333;
+    text-decoration: none;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 70%;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.topic-item .topic-title:hover {
+    text-decoration: underline;
+}
+.topic-item .topic-title:visited {
+    color: #888;
+}
+.topic-item .last-time {
+    float: right;
+}
+
+.pagination {
+    margin-top: 20px;
+}
 
 @media all and (max-width: 960px){
     .topics-wrapper .left {

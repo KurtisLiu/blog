@@ -19,6 +19,12 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
+    public void updateUser(User user) {
+        logger.debug(user);
+        userMapper.updateUser(user);
+    }
+
+    @Override
     public User getUserById(String userId) {
         logger.debug("userId = " + userId);
         if (userId == null) {

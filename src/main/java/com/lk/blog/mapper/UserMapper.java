@@ -14,4 +14,6 @@ public interface UserMapper {
     public void deleteUserById(String id);
 
     public User getUserByEmail(String email);
+
+    public void updateUser(User user);
 }
