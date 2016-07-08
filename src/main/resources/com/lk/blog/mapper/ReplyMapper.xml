@@ -3,6 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.lk.blog.mapper.ReplyMapper">
+    <resultMap id="associatedUser" type="user" autoMapping="true">
+        <id property="id" column="id" />
+    </resultMap>
+
+    <resultMap id="associatedReply" type="reply" autoMapping="true">
+        <id property="id" column="id" />
+        <association property="author" resultMap="associatedUser" autoMapping="true" columnPrefix="author_" />
+    </resultMap>
 
     <insert id="addReply" parameterType="reply">
         INSERT INTO reply (id, username, email, password) VALUES(uuid(), #{username}, #{email}, #{password});
@@ -15,5 +23,11 @@
     <delete id="deleteReply">
         DELETE FROM reply WHERE id = #{replyId}
     </delete>
+
+    <select id="getReplyByTopicId" resultMap="associatedReply">
+        SELECT r.*, u.username as author_username, u.avator as author_avator, u.email as author_email
+        FROM reply r INNER JOIN user u ON r.author_id = u.id
+        WHERE r.deleted = 0 AND r.topic_id = #{topicId}
+    </select>
 
 </mapper>

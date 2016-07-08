@@ -18,15 +18,21 @@
         <result property="visitCount" column="visit_count" />
         <result property="isGood" column="good" />
         <result property="lastReplyDate" column="last_reply_date" />
-        <association property="tag" javaType="tag" columnPrefix="tag_">
+        <association property="tag" javaType="tag" columnPrefix="tag_" autoMapping="true">
             <id property="id" column="tag_id" />
         </association>
         <association property="author" resultMap="associatedUser" columnPrefix="author_" />
         <association property="lastReplyUser" resultMap="associatedUser" columnPrefix="last_reply_user_" />
     </resultMap>
 
+    <sql id="topicSelect">
+        SELECT t.*, u.username as author_username, u.avator as author_avator, u.email as author_email, tag.name as tag_name, replyUser.id as last_reply_user_id, replyUser.avator as last_reply_user_avator
+        FROM topic t LEFT JOIN user u ON t.author_id = u.id LEFT JOIN tag ON t.tag_id = tag.id LEFT JOIN user replyUser on t.last_reply_user = replyUser.id
+    </sql>
+
     <select id="getTopicById" resultMap="associatedTopic">
-        SELECT * FROM topic WHERE id=#{topicId}
+        <include refid="topicSelect" />
+        WHERE t.deleted = 0 AND t.id = #{topicId}
     </select>
 
     <insert id="addTopic" parameterType="topic">
@@ -34,8 +40,7 @@
     </insert>
     
     <select id="getTopicsByPage" resultMap="associatedTopic" parameterType="page">
-        SELECT t.*, u.username as author_username, u.avator as author_avator, u.email as author_email, tag.name as tag_name, replyUser.id as last_reply_user_id, replyUser.avator as last_reply_user_avator
-        FROM topic t LEFT JOIN user u ON t.author_id = u.id LEFT JOIN tag ON t.tag_id = tag.id LEFT JOIN user replyUser on t.last_reply_user = replyUser.id
+        <include refid="topicSelect" />
         WHERE t.deleted = 0 AND u.deleted = 0
         <if test="query != null">
             AND t.content LIKE "%#{query}%"

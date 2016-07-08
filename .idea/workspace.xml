@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="241062ce-9d4e-45e1-a668-f3e540398483" name="Default" comment="剔除mybatis分页插件，添加文件上传功能">
+    <list default="true" id="241062ce-9d4e-45e1-a668-f3e540398483" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topicDetail.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/build/css/topicDetail.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/resolver/ExceptionResolver.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/resolver/ExceptionResolver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/ReplyMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/ReplyMapper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/ReplyMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/ReplyMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/profile.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/profile.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/build/css/topicCreate.css" afterPath="$PROJECT_DIR$/src/main/webapp/build/css/topicCreate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/build/css/topics.css" afterPath="$PROJECT_DIR$/src/main/webapp/build/css/topics.css" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,31 +34,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="topics.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl">
+      <file leaf-file-name="topicDetail.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topicDetail.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topics.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/build/css/topics.css">
+      <file leaf-file-name="topicDetail.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/build/css/topicDetail.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DateUtils.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+            <state relative-caret-position="494">
+              <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -92,10 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/exception/ParameterException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/exception/DataErrorException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/exception/BusinessException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/utils/Base64Utils.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/build/css/base.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/register.ftl" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/components/header.ftl" />
@@ -121,12 +104,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/utils/FreemarkerStaticModels.java" />
         <option value="$PROJECT_DIR$/src/main/resources/staticClass.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/interceptor/PaginationInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/TopicMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/dto/Page.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/build/css/profile.css" />
@@ -139,10 +119,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/resolver/ExceptionResolver.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/UserMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/build/css/topics.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/ReplyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/ReplyMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topicDetail.ftl" />
+        <option value="$PROJECT_DIR$/src/main/webapp/build/css/topicDetail.css" />
       </list>
     </option>
   </component>
@@ -200,7 +187,6 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -407,6 +393,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="blog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -571,6 +583,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -584,19 +597,19 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.lk.blog.dto" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\workspace\java\blog\src\main\webapp\build\css" />
-      <recent name="D:\workspace\java\blog\src\main\webapp\WEB-INF\ftl" />
-      <recent name="D:\workspace\java\blog\src\main\resources\com\lk\blog\mapper" />
-      <recent name="D:\workspace\java\blog\src\test\resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\workspace\java\blog\src\main\webapp\WEB-INF\ftl\exception" />
       <recent name="D:\workspace\java\blog\src\main\webapp\build" />
       <recent name="D:\workspace\java\blog\src\main\resources\mapper" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\java\blog\src\main\webapp\WEB-INF\ftl" />
+      <recent name="D:\workspace\java\blog\src\main\webapp\build\css" />
+      <recent name="D:\workspace\java\blog\src\main\resources\com\lk\blog\mapper" />
+      <recent name="D:\workspace\java\blog\src\test\resources" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.lk.blog.dto" />
     </key>
   </component>
   <component name="RunManager" selected="Maven.run">
@@ -1230,7 +1243,8 @@
       <workItem from="1467637144262" duration="13757000" />
       <workItem from="1467721715997" duration="9628000" />
       <workItem from="1467807935470" duration="11222000" />
-      <workItem from="1467896786472" duration="4389000" />
+      <workItem from="1467896786472" duration="4441000" />
+      <workItem from="1467980176624" duration="5429000" />
     </task>
     <task id="LOCAL-00001" summary="注册登录功能">
       <created>1467041939956</created>
@@ -1281,7 +1295,14 @@
       <option name="project" value="LOCAL" />
       <updated>1467825177724</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="更新用户信息">
+      <created>1467911361792</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1467911361792</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1317,7 +1338,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183471000" />
+    <option name="totallyTimeSpent" value="188952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1373,7 +1394,8 @@
     <MESSAGE value="mybatis分页加载插件" />
     <MESSAGE value="topic列表页数据查询，freemarker中引用静态方法配置添加" />
     <MESSAGE value="剔除mybatis分页插件，添加文件上传功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="剔除mybatis分页插件，添加文件上传功能" />
+    <MESSAGE value="更新用户信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新用户信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1388,7 +1410,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="80" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1409,40 +1431,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8-sources.jar!/org/apache/ibatis/plugin/Plugin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="421" column="25" selection-start-line="421" selection-start-column="25" selection-end-line="421" selection-end-column="25" />
-          <folding>
-            <element signature="e#16338#16339#0" expanded="false" />
-            <element signature="e#16420#16421#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.2.8/mybatis-3.2.8-sources.jar!/org/apache/ibatis/builder/xml/mybatis-3-mapper.dtd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/vo/AjaxResult.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/interceptor/PrivilegeInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/dto/AjaxResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1514,27 +1502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/Topic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/Reply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -1559,13 +1526,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/TopicMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1577,13 +1537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1658,7 +1611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1666,7 +1618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1674,7 +1625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1686,19 +1636,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="95" column="56" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1736,7 +1677,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="174" column="27" selection-start-line="174" selection-start-column="27" selection-end-line="174" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1744,56 +1684,145 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="26" column="39" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
-          <folding>
-            <marker date="1467910517080" expanded="true" signature="1337:1376" ph="SELECT * FRO... topic" />
-            <marker date="1467910517080" expanded="true" signature="1447:1656" ph="INSERT INTO topic... " />
-            <marker date="1467910517080" expanded="true" signature="1767:1981" ph="SELECT * FRO... topic" />
-            <marker date="1467910517080" expanded="true" signature="1767:2164" ph="SELECT t.*, topic" />
-            <marker date="1467910517080" expanded="true" signature="1767:2293" ph="SELECT t.*, topic" />
-            <marker date="1467910517080" expanded="true" signature="2369:2422" ph="UPDATE topic... " />
-            <marker date="1467910517080" expanded="true" signature="2476:2515" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        <state relative-caret-position="570">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/build/css/topics.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+        <state relative-caret-position="342">
+          <caret line="18" column="26" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/utils/DateUtils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+        <state relative-caret-position="1351">
+          <caret line="95" column="56" selection-start-line="95" selection-start-column="48" selection-end-line="95" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/service/TopicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/IndexController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/Reply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/mapper/ReplyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/ReplyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <marker date="1467991652263" expanded="true" signature="638:738" ph="INSERT INTO reply... " />
+            <marker date="1467991652263" expanded="true" signature="839:878" ph="DELETE FROM " />
+            <marker date="1467991652263" expanded="true" signature="966:1176" ph="SELECT r.*, reply" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/model/Topic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="14" column="15" selection-start-line="14" selection-start-column="15" selection-end-line="14" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/service/impl/TopicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="46" column="9" selection-start-line="46" selection-start-column="9" selection-end-line="46" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/lk/blog/mapper/TopicMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="20" column="88" selection-start-line="20" selection-start-column="88" selection-end-line="20" selection-end-column="88" />
+          <folding>
+            <marker date="1467992489576" expanded="true" signature="1324:1675" ph="SELECT t.*, topic" />
+            <marker date="1467992489576" expanded="true" signature="1755:1836" ph="SELECT * FRO... topic" />
+            <marker date="1467992489576" expanded="true" signature="1907:2116" ph="INSERT INTO topic... " />
+            <marker date="1467992489576" expanded="true" signature="2258:2304" ph="SELECT t.*, topic" />
+            <marker date="1467992489576" expanded="true" signature="2258:2433" ph="SELECT t.*, topic" />
+            <marker date="1467992489576" expanded="true" signature="2509:2562" ph="UPDATE topic... " />
+            <marker date="1467992489576" expanded="true" signature="2616:2655" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/lk/blog/controller/ui/TopicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="46" column="33" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topics.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="33" column="68" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/ftl/topicDetail.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/build/css/topicDetail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding />
         </state>
       </provider>

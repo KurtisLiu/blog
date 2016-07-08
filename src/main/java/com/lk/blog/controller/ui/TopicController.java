@@ -8,6 +8,7 @@ import com.lk.blog.model.User;
 import com.lk.blog.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -50,6 +51,17 @@ public class TopicController {
     @RequestMapping(value = "/toCreate", method = RequestMethod.GET)
     public ModelAndView toCraete() {
         ModelAndView modelAndView = new ModelAndView("topicCreate");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/{topicId}")
+    public ModelAndView toTopicDetail(@PathVariable String topicId) {
+        Topic topic = topicService.getTopicById(topicId);
+        if (topic == null) {
+            return new ModelAndView("redirect:/404");
+        }
+        ModelAndView modelAndView = new ModelAndView("topicDetail");
+        modelAndView.addObject(topic);
         return modelAndView;
     }
 }

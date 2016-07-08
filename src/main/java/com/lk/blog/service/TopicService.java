@@ -8,4 +8,5 @@ public interface TopicService {
 
     public void addTopic(Topic topic);
 
+    public Topic getTopicById(String topicId);
 }

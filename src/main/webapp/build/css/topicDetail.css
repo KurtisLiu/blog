@@ -1,0 +1,42 @@
+.topic-detail-wrapper {
+    min-width: 960px;
+    margin: 15px 20px 0;
+    position: absolute;
+    padding: 0;
+}
+.section-left {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 310px;
+}
+.section-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 290px;
+    margin-left: 20px;
+}
+
+.topic-detail {
+    background-color: #FFF;
+    border-radius: 3px 3px 0 0;
+}
+.topic-detail .header {
+    padding: 10px;
+}
+.header-left li {
+    margin-right: 10px;
+    display: inline-block;
+}
+.topic-detail .topic-title {
+    font-size: 22px;
+    font-weight: bold;
+}
+.topic-detail .content {
+    padding: 10px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.replies-panel {
+    margin-top: 20px;
+}
