@@ -13,7 +13,8 @@
     </resultMap>
 
     <insert id="addReply" parameterType="reply">
-        INSERT INTO reply (id, username, email, password) VALUES(uuid(), #{username}, #{email}, #{password});
+        INSERT INTO reply (id, content, author_id, topic_id, create_date, update_date)
+        VALUES(uuid(), #{content}, #{author.id}, #{topic.id}, #{createDate}, #{updateDate});
     </insert>
 
     <update id="updateReply">

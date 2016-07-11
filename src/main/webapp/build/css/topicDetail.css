@@ -40,3 +40,22 @@
 .replies-panel {
     margin-top: 20px;
 }
+
+
+.reply-panel {
+    margin-top: 20px;
+}
+.reply-content {
+    width: 100%;
+    resize: vertical;
+    height: 180px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.reply-btn {
+    border-width: 0;
+    background-color: #08c;
+    padding: 8px 20px;
+    color: #FFF;
+    border-radius: 2px;
+}

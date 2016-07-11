@@ -1,7 +1,7 @@
 package com.lk.blog.service;
 
-/**
- * Created by Administrator on 2016/6/21.
- */
+import com.lk.blog.model.Reply;
+
 public interface ReplyService {
+    void addReply(Reply reply);
 }

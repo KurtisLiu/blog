@@ -33,16 +33,39 @@
 
             <div class="panel replies-panel">
                 <div class="panel-header">
-                    ${topic.replies?size}次浏览
+                ${topic.replies?size}次浏览
                 </div>
                 <div class="panel-body">
-                    <#list topic.replies as reply>
-                        <div class="reply_item">
+                <#list topic.replies as reply>
+                    <div class="reply_item">
+                        <div class="reply-item-row">
+                            <img src="${reply.author.avator!''}" class="reply-author-avator">
+                            <span class="reply-content">
+                                <span>${reply.author.username!''}</span>
+                                <a href="#">${reply_index + 1}楼</a>
+                            </span>
+                            <span class="reply-action">
+
+                            </span>
+                        </div>
+                        <div class="reply-item-row">
                             ${reply.content}
                         </div>
-                    </#list>
+                    </div>
+                </#list>
                 </div>
-        </div>
+            </div>
+
+            <div class="panel reply-panel">
+                <div class="panel-header">添加回复</div>
+                <div class="panel-body">
+                    <form action="/reply" method="POST">
+                        <input type="hidden" name="topic.id" value="${topic.id}" />
+                        <textarea id="reply" name="content" class="reply-content"></textarea>
+                        <input type="submit" class="reply-btn" value="回复" />
+                    </form>
+                </div>
+            </div>
 
         </div>
 
